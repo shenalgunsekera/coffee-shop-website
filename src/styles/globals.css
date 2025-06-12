@@ -1,0 +1,154 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+.bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* Shrinks the video to 90% */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.40;
+  pointer-events: none;
+}
+
+body {
+  color: #fff;
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
+placeholder-shown{
+  color: #000;
+}
+
+
+
+hr {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bbb;
+}
+
+/* Override Bootstrap to black/white */
+.btn {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #bbb;
+  color: #000;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+.navbar .nav-link {
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #bbb !important;
+}
+
+.btn-outline-light {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .btn-outline-light {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  background-color: #111 !important;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-text {
+  color: #ccc;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+footer a:hover {
+  color: #bbb !important;
+  transition: color 0.3s ease;
+}
+
+
+footer img {
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.05);
+}
+section {
+  transition: all 0.4s ease-in-out;
+}
+
+
+
