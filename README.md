@@ -9,6 +9,7 @@ nextjs set up (https://nextjs.org/docs/app/getting-started/installation)
 npm i
 mpm i aos
 npm i three
+npm install bootstrap @popperjs/core
 
 
 First, run the development server:
