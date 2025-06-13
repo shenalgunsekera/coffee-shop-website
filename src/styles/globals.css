@@ -5,7 +5,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1); /* Shrinks the video to 90% */
+  transform: translate(-50%, -50%) scale(1);
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -20,18 +20,14 @@ body {
   background-color: #000;
 }
 
-placeholder-shown{
-  color: #000;
-}
-
-
-
 hr {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
@@ -48,7 +44,6 @@ a:hover {
   color: #bbb;
 }
 
-/* Override Bootstrap to black/white */
 .btn {
   transition: all 0.3s ease;
   transform-origin: center;
@@ -76,7 +71,11 @@ a:hover {
 }
 
 .bg-black {
-  background-color: #000 !important;
+  background-color: #000 ;
+}
+
+.navbar {
+  z-index: 1100; /* higher than collapsed menu */
 }
 
 .navbar .nav-link {
@@ -85,7 +84,7 @@ a:hover {
 }
 
 .navbar .nav-link:hover {
-  color: #bbb !important;
+  color: #bbb ;
 }
 
 .btn-outline-light {
@@ -97,22 +96,10 @@ a:hover {
   color: #000;
 }
 
-@media (max-width: 991px) {
-  .navbar-nav {
-    gap: 1rem;
-    padding-top: 1rem;
-  }
-
-  .btn-outline-light {
-    width: 100%;
-    text-align: center;
-  }
-}
-
 .custom-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 12px;
-  background-color: #111 !important;
+  background-color: #111 ;
 }
 
 .custom-card:hover {
@@ -138,17 +125,119 @@ footer a:hover {
   transition: color 0.3s ease;
 }
 
-
 footer img {
   transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
 }
 
 footer img:hover {
   transform: scale(1.05);
 }
+
 section {
   transition: all 0.4s ease-in-out;
 }
 
+/* HERO SECTION */
+.hero-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -5%) scale(1);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.80;
+  pointer-events: none;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 991px) {
+  .navbar-nav {
+    gap: 1rem;
+    background-color: #000;
+    padding: 1rem;
+    border-radius: 8px;
+    padding-top: 1rem;
+  }
+
+  #navbarNav.collapse.show {
+    position: fixed !important;
+    top: 56px; /* height of your navbar, adjust if different */
+    left: 0;
+    right: 0;
+    z-index: 1150;
+    background-color: #000; /* same as navbar background */
+    padding: 1rem 2rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+  }
+
+  #navbarNav.collapse {
+  transition: all 0.3s ease;
+}
 
 
+
+  .navbar .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .btn-outline-light {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-section {
+    transform: translate(-50%, -20%) scale(1);
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 1.75rem;
+  }
+
+  .hero-section {
+    transform: translate(-50%, -15%) scale(1);
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}

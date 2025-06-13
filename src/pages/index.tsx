@@ -10,22 +10,28 @@ export default function Home() {
         <title>Coffee Shop</title>
       </Head>
 
-      <video autoPlay loop muted playsInline className="bg-video">
-        <source src="/videos/background.mp4" type="video/mp4" />
-      </video>
-
 
       <Navbar />
 
       <main className="container py-5 text-white" >
         {/* Hero */}
-        <section className="text-center mb-5" data-aos="fade-down" >
-          <h1 className="display-4 fw-bold mb-3">WELCOME TO COFFEE SHOP</h1>
-          <hr className="bg-white opacity-25 mb-4" style={{ width: '150px', margin: '0 auto' }} />
-          
-        </section>
+        <section className="hero-section position-relative d-flex justify-content-center align-items-center text-center text-white">
+          <video autoPlay loop muted playsInline className="bg-video position-absolute w-100 h-100 object-fit-cover">
+            <source src="/videos/background.mp4" type="video/mp4" />
+          </video>
 
+          <div className="position-relative z-1">
+            <h1 className="display-4 fw-bold mb-3">WELCOME TO COFFEE SHOP</h1>
+            <hr className="bg-white opacity-25 mb-4" style={{ width: '150px', margin: '0 auto' }} />
+          </div>
+        </section>
+        <br>  
+
+        </br>
         <hr className="text-white opacity-25 my-5" />
+        <br>  
+
+        </br>
 
         {/* Section 1 */}
         <section className="row align-items-center mb-5"  data-aos="fade-right">
