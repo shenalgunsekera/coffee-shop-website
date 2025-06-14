@@ -151,9 +151,9 @@ export default function Home() {
         <section className="row align-items-center mb-5"  data-aos="fade-right">
           <div className="col-md-6 mb-3 mb-md-0">
             <img
-              src="/images/download.jpg"
+              src="/images/2.jpg"
               alt="Coffee Beans"
-              style={{ height: '300px', objectFit: 'cover' }}
+              style={{ height: '300px', width: '500px', objectFit: 'cover' }}
               className="img-fluid rounded-4 shadow"
             />
           </div>
@@ -171,7 +171,7 @@ export default function Home() {
         <section className="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-left">
           <div className="col-md-6 mb-3 mb-md-0">
             <img
-              src="/images/espresso.jpg"
+              src="/images/1.jpg"
               alt="Fresh Coffee"
               style={{ height: '300px', width: '500px', objectFit: 'cover' }}
               className="img-fluid rounded-4 shadow"
